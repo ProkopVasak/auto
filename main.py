@@ -3,7 +3,7 @@ pin_L = DigitalPin.P13
 pin_R = DigitalPin.P14
 pin_Trig = DigitalPin.P8
 pin_Echo = DigitalPin.P15
-whiteline = 1
+whiteline = 0
 connected = 0
 strip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
 pins.set_pull(pin_L, PinPullMode.PULL_NONE)
