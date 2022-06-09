@@ -1,4 +1,4 @@
-speedFactor = 80
+speedFactor = 100
 pin_L = DigitalPin.P13
 pin_R = DigitalPin.P14
 pin_Trig = DigitalPin.P8
@@ -13,7 +13,7 @@ basic.show_string("S")
 l = None
 r = None
 # temporary code
-motor_run(100, 100); basic.pause(2000)
+"""motor_run(100, 100); basic.pause(2000)
 motor_run(); basic.pause(300)
 motor_run(-100, -100, 60); basic.pause(2000)
 motor_run()
@@ -22,7 +22,7 @@ strip.set_pixel_color(0, neopixel.hsl(0, 50, 50)) # hmax = 360, smax = 100, lmax
 strip.set_pixel_color(3, neopixel.hsl(140, 100, 25))
 strip.show()
 # end of temporary code
-
+"""
 def motor_run(left = 0, right = 0, speed_factor = 80):
     PCAmotor.motor_run(PCAmotor.Motors.M1, Math.map(Math.constrain(left * (speedFactor / 100), -100, 100), -100, 100, -255, 255))
     PCAmotor.motor_run(PCAmotor.Motors.M4, Math.map(Math.constrain(-1 * right * (speedFactor / 100), -100, 100), -100, 100, -255, 255))
